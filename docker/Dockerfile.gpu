@@ -3,7 +3,14 @@ FROM tensorflow/tensorflow:2.10.1-gpu
 RUN rm /etc/apt/sources.list.d/cuda.list
 
 RUN apt-get update
-RUN apt-get install -y unzip graphviz curl musescore3
+RUN apt-get install -y \
+    curl \
+    graphviz \
+    libhdf5-dev \
+    musescore3 \
+    pkg-config \
+    python3-pip \
+    unzip
 
 RUN pip install --upgrade pip
 
