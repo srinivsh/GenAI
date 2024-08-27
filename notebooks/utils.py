@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 
 
 def sample_batch(dataset):
+    """Takes a single batch from a tf.data.Dataset."""
     batch = dataset.take(1).get_single_element()
     if isinstance(batch, tuple):
         batch = batch[0]
